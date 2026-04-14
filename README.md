@@ -29,3 +29,9 @@ Once the tool is deployed, use the following commands in your terminal:
 To find where a user is active on social media:
 ```bash
 python aborabsh.py --user [target_username]
+
+
+Infrastructure Auditing (Website Scan)
+To perform a deep-dive security audit on a web server or domain, execute:
+python aborabsh.py --site [TARGET_DOMAIN]
+
