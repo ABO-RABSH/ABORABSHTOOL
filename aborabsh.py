@@ -49,7 +49,7 @@ def check_social(username):
                 table.add_row(name, "FOUND ✓")
             else:
                 table.add_row(name, "[red]NOT FOUND[/red]")
-        except:
+        except Exception:
             table.add_row(name, "[red]ERROR[/red]")
     
     console.print(table)
@@ -61,7 +61,7 @@ def check_website(domain):
         w = whois.whois(domain)
         console.print(f"[green][+] Registrar:[/green] {w.registrar}")
         console.print(f"[green][+] Creation Date:[/green] {w.creation_date}")
-    except:
+    except Exception:
         console.print("[red][!] WHOIS Lookup Failed.[/red]")
 
     console.print(f"\n[bold yellow][*] Starting Nmap Port Scan (Please wait...)[/bold yellow]")
